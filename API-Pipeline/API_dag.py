@@ -66,7 +66,7 @@ with DAG(
         task_id='API_test',
         method='GET',
         http_conn_id='http_default',
-        endpoint='/api.openweathermap.org/data/2.5/weather?appid=270639d6ad59a005ade7a0ebcbf1220a&q=Savannah',
+        endpoint='http://api.openweathermap.org/data/2.5/weather?appid=270639d6ad59a005ade7a0ebcbf1220a&q=Savannah',
         response_check=lambda response: True if response.json()['cod'] == 200 else False,
         poke_interval=5,
         timeout=20
